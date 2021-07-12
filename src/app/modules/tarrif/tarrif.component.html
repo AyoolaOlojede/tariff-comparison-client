@@ -1,0 +1,15 @@
+
+ <div class="container">
+ <h2 class="text-center">Tarrif Comparison</h2>
+<form  [formGroup]="searchForm" (ngSubmit)="compareProducts()">
+  <input type="number" placeholder="kwh/y" formControlName="searchText"  id="searchText" >
+  <button type="submit" >Search</button>
+</form>
+<div *ngFor="let tarrif of tarrifs$  | async">
+ 
+
+  <p>{{tarrif.tarrifName}}</p>
+  <p>{{tarrif.annualCost}}</p> 
+ 
+</div>
+ </div>
